@@ -30,10 +30,19 @@ sequelize.models = Object.fromEntries(capsEntries);
 
 // En sequelize.models están todos los modelos importados como propiedades
 // Para relacionarlos hacemos un destructuring
-const { Dog } = sequelize.models;
+const { Dog, Temperaments, Favorites } = sequelize.models;
+
 
 // Aca vendrian las relaciones
 // Product.hasMany(Reviews);
+
+ // Este archivo convierte mi modelo a mayuscula XD
+ // Pero solo para manipularlo aqui ,porque el verdadero nombre que le puse es con minuscula
+ Dog.belongsToMany(Temperaments, { through: "BreedxTemperament"})
+ Temperaments.belongsToMany(Dog, { through: "BreedxTemperament"})
+
+  Favorites.hasMany(Dog);
+  Dog.belongsTo(Favorites)
 
 module.exports = {
   ...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');

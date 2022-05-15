@@ -1,0 +1,8 @@
+Dentro de mi componente Dog, el secreto para que las imagenes esten todas del mismo tamaño es colocar la imagen dentro de una section, para que de esta forma sea uniforme XD
+
+
+HACIENDO 8 POR PÁGINA
+
+
+NO USAR RENDER, ESA WEBADA ME HIZO PERDER CASI 30 MIN
+MEJOR USAR COMPONENT PARA PODER PASAR LAS PROPS.

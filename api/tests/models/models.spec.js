@@ -19,4 +19,7 @@ describe('Dog model', () => {
       });
     });
   });
+
+
+  describe('Data Validate', ()=> )
 });

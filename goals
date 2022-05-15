@@ -1,0 +1,52 @@
+DATA BASE: COMPLETE
+BACKEND:
+    GET /dogs: COMPLETE
+
+    GET /dogs?name="...":
+    Falta: Si no existe ninguna raza de perro mostrar un mensaje adecuado
+
+    GET /dogs/{idRaza}:
+
+    GET /temperament:
+
+    POST /dog:
+
+FRONT-END:
+Ruta principal: debe contener
+
+    [x] Input de búsqueda para encontrar razas de perros por nombre
+    [x] Área donde se verá el listado de razas de perros. Deberá mostrar su:
+    Imagen
+    Nombre
+    Temperamento
+    Peso
+    [x] Botones/Opciones para filtrar por:
+    Temperamento
+    Raza existente (es decir las que vienen de la API) o agregada por nosotros (creadas mediante el form)
+    [x] Botones/Opciones para ordenar tanto ascendentemente como descendentemente las razas de perro por:
+    Orden alfabético
+    Peso
+    [x] Paginado para ir buscando y mostrando las siguientes razas, mostrando 8 razas por página.
+
+Ruta de detalle de raza de perro: 
+
+    [x] Los campos mostrados en la ruta principal para cada raza (imagen, nombre y temperamento)
+    [x] Altura
+    [x] Peso
+    [x] Años de vida
+
+Ruta de creación de raza de perro: debe contener
+
+    [x] Un formulario controlado con JavaScript con los siguientes campos:
+    Nombre
+    Altura (Diferenciar entre altura mínima y máxima)
+    Peso (Diferenciar entre peso mínimo y máximo)
+    Años de vida
+    [x] Posibilidad de seleccionar/agregar uno o más temperamentos
+    [x] Botón/Opción para crear una nueva raza de perro
+
+
+ADICIONALES:
+    Lista de favoritos
+    Cada tarjeta de detalle tiene una ruta hacia mas información de wikipedia
+    https://es.wikipedia.org/wiki/${dog_name}

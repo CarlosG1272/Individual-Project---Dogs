@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+
+.body {
+    background-image: url(https://http2.mlstatic.com/D_816757-MLA42931906892_072020-O.jpg);
+
+}
+.container{
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba( 248, 0, 0, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 ); 
+    font-family: 'Macondo', cursive;
+    font-size: 30px;
+}
+
+.large{ 
+    width: 100%;
+}
+
+.label{
+    width: 70%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+input{
+    height: 30px;
+    border-radius: 10px;
+    background-color: greenyellow;
+    padding-left: 20px
+}
+
+input::placeholder{
+    color: green;
+    font-size: 15px;
+}
+
+#height {
+    display: flex;
+    justify-content: space-between;
+}
+
+#weight {
+    display: flex;
+    justify-content: space-between;
+}
+
+#life{
+    display: flex;
+    justify-content: space-between;
+}
+
+#submit{
+    width: 100px;
+    height: 30px;
+    background-color: transparent;
+    border: 2px solid red;
+}
+#submit:hover {
+    width: 100px;
+    height: 30px;
+    background-color: red;
+    border: 2px solid transparent;
+    cursor: pointer;
+}

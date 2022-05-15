@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+
+
+  
+.container{
+    height: 100vh;
+    width: 100%;
+    background-image: url(https://s1.1zoom.me/b4542/829/Dogs_Run_Bokeh_Jack_Russell_terrier_571695_1920x1080.jpg);
+    background-size: contain;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.title{
+    margin-top: 45px;
+    color: rgb(31, 11, 0);
+    width: 100%;
+    text-align: center;
+    font-family: 'Koulen', cursive;
+    font-size: 50px;
+}
+
+.text {
+    color: rgb(42, 37, 80);
+    width: 30%;
+    margin: auto;
+    margin-right: 140px;
+    margin-top: 20px;
+    font-family: 'Koulen', cursive;
+    font-size: 30px;
+    text-align: center
+}
+
+
+
+#start{
+    
+    /* Para que encaje al centro del div XD */
+    width: 60%;
+    margin: auto;
+    /* =================================== */
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;  
+    align-items: flex-end;
+    height: 200px;
+
+    
+}
+
+#fingerprint:hover{
+    border-radius: 70px;
+    animation: changeColor .5s forwards;
+}
+@keyframes changeColor {
+    0%{
+        background-color: transparent; 
+    } 
+    50% {
+        background-color: rgba(0, 128, 0, 0.544);
+    }
+    100%{
+        background-color: rgb(0, 128, 0)
+    }
+}
+
+#button {
+    width: 150px;
+    font-family: 'Koulen', cursive;
+    font-size: 35px;
+    color: rgb(224, 77, 1);
+    position: absolute;
+    right: 9%;
+    bottom: 15px;
+}
