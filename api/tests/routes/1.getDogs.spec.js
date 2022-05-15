@@ -36,12 +36,12 @@ describe('GET /DOGS', () => {
         let expectDataDb = {"api": [], "db": {"height_max": 30, "height_min": 5, "max_life": 20, "min_life": 10, "name": "Firulais", "temperaments": [], "weight_max": 20, "weight_min": 10}}
 
         describe("If send incorrect name: ", ()=> {
-            it('responds with 404', async()=>{
+            it("responds with 404", async()=>{
                 const response = await request(server).get("/dogs?name=skwjrbnx")
                 expect(response.statusCode).toBe(404)
             })
     
-            it('responds with an object containing an error message', async()=> {
+            it("responds with an object containing an error message", async()=> {
                 const response = await request(server).get("/dogs?name=asmxq123ns")
                 expect(response.body).toEqual({msg: "No information found"})
             })

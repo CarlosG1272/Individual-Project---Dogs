@@ -2,7 +2,7 @@ const request = require("supertest")
 const server = require("../../src/app")
 const { Dog } = require('../../src/db.js');
 
-describe('GET /dogs/:id', () => {
+describe("GET /dogs/:id", () => {
     describe("When  send invalid Id", ()=> {
         it("Should be responds with 404 status code when send invalid id", async ()=>{
             const response = await request(server).get("/dogs/wrong")
@@ -52,13 +52,13 @@ describe('GET /dogs/:id', () => {
             })
         });
 
-        describe('The dog is in DataBase', () => {
+        describe("The dog is in DataBase", () => {
             let createDogDB = {name: "Firulais", height_min: 5,height_max: 30, weight_min: 10,weight_max: 20,min_life: 10, max_life: 20, temperaments: []}
 
             let expectData = {"height_max": 30, "height_min": 5, "max_life": 20, "min_life": 10, "name": "Firulais", "temperaments": [], "weight_max": 20, "weight_min": 10}
             
-            beforeAll(()=>{
-                Dog.create(createDogDB)
+            beforeAll(async ()=>{
+                await Dog.create(createDogDB)
             })
 
             afterAll(()=> {
@@ -69,7 +69,6 @@ describe('GET /dogs/:id', () => {
                 let dogFound = await Dog.findOne({where: {name: "Firulais"}})
                 let id = dogFound.id
                 const response = await request(server).get(`/dogs/${id}`)
-                console.log(response)
                 expect(response.statusCode).toStrictEqual(200)
             })
 
@@ -77,7 +76,6 @@ describe('GET /dogs/:id', () => {
                 let dogFound = await Dog.findOne({where: {name: "Firulais"}})
                 let id = dogFound.id
                 const response = await request(server).get(`/dogs/${id}`)
-                console.log(response)
                 expect(response.body).toMatchObject(expectData)
             })
 

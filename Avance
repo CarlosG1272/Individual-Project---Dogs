@@ -23,3 +23,6 @@ VIERNES:
     - Arreglado las relaciones, ahora si funciona mi findorCreate
     - Routa de temperamentos ahora devuelve de forma ordenada
     - Select
+
+DOMINGO: 
+    - All testing api complete

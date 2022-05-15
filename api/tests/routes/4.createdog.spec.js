@@ -7,7 +7,7 @@ describe("Create Dog in DataBase",()=> {
     afterAll(()=>{
         Dog.sync({force: true})
     })
-    describe('POST /dog', () => {
+    describe("POST /dog", () => {
             let invalidData = {name: 10, 
                 height_min: "hi", 
                 height_max: "xd", 
@@ -26,36 +26,36 @@ describe("Create Dog in DataBase",()=> {
                     max_life: 30, 
                     temperaments: ["Intelligent", "Curious"]}
            
-            describe('If send empty or invalid data',  () => {  
-                it('should be responds with 400 when dont send body', async () => {
+            describe("If send empty or invalid data",  () => {  
+                it("should be responds with 400 when dont send body", async () => {
                     let response = await request(server).post("/dog").send({})
                     expect(response.statusCode).toBe(400)
                 }); 
 
-                it('should be responds with a custom error msg', async () => {
+                it("should be responds with a custom error msg", async () => {
                     let response = await request(server).post("/dog").send({})
                     expect(response.text).toStrictEqual("Incomplete data")
                 }); 
 
 
-                it('should be responds with 400 when send invalid data', async () => {
+                it("should be responds with 400 when send invalid data", async () => {
                     let response = await request(server).post("/dog").send(invalidData)
                     expect(response.statusCode).toBe(400)
                 }); 
 
-                it('should be responds with a custom error msg', async()=> {
-                    let response = await request(server).post('/dog').send(invalidData)
+                it("should be responds with a custom error msg", async()=> {
+                    let response = await request(server).post("/dog").send(invalidData)
                     expect(response.body).toBe("SequelizeDatabaseError")
                 })
             });
             
-            describe('If send correct data', () => {
-                it('should be responds whit status code 201', async () => {
+            describe("If send correct data", () => {
+                it("should be responds whit status code 201", async () => {
                     let response = await request(server).post("/dog").send(correctData1)
                     expect(response.statusCode).toBe(201)
                 });
 
-                it('should be responds with a message "Dog successfully created"', async ()=> {
+                it("should be responds with a message 'Dog successfully created'", async ()=> {
                     let response = await request(server).post("/dog").send(correctData1)
                     expect(response.body).toStrictEqual({msg: "Dog successfully created"})
                 })
@@ -63,7 +63,7 @@ describe("Create Dog in DataBase",()=> {
         });
 
 
-    describe('DELETE /dog',  () => {
+    describe("DELETE /dog",  () => {
 
         describe("If send invalid ID",()=>{
             it("should be responds with status code 500", async ()=> {
@@ -71,14 +71,14 @@ describe("Create Dog in DataBase",()=> {
                 expect(response.statusCode).toBe(500)
             })
     
-            it('should be responds with a message indicating fail in delete', async () => {
+            it("should be responds with a message indicating fail in delete", async () => {
                 let response = await request(server).delete('/dog?id=nemnsa')
                 expect(response.body).toStrictEqual({msg: "Error in delete"})
             });
         }) 
             
         
-        describe('If send correct ID', () => {
+        describe("If send correct ID", () => {
             // Arriba cree 2 dogs con los mismos datos pero con diferentes ids
             beforeAll(async ()=> {
                 dogSelected = await Dog.findAll({where: {name: "Baxer"}})

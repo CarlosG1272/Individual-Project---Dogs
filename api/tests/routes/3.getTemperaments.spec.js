@@ -1,16 +1,20 @@
 
 const request = require("supertest")
 const server = require("../../src/app")
-const {Dog, Temperaments} =require('../../src/db')
+const {Temperaments} =require('../../src/db')
 
-describe('GET /temperaments', () => {
-     afterAll(async ()=>{
-         await Temperaments.sync({force: true})
+describe("GET /temperaments", () => {
+     afterAll( ()=>{
+         Temperaments.sync({force: true})
+     })
+
+     beforeAll( ()=> {
+        Temperaments.sync({force: true})
      })
      
     it("Save the data in DB in the first instance", async ()=>{
         const response = await request(server).get('/temperaments')
-        expect(response.body[0].id).toBe(undefined)
+        expect(response.body[0]).toBe(undefined)
     })
     
     it("Responds with status code 200", async()=> {
@@ -20,6 +24,6 @@ describe('GET /temperaments', () => {
 
     it("In the second instance the data provides from DB", async ()=>{
         const response = await request(server).get('/temperaments')
-        expect(response.body.length).toBe(124)
+        expect(Array.isArray(response.body)).toBe(true)
     })
 });

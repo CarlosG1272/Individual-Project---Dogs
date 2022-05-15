@@ -2,15 +2,15 @@ const request = require("supertest");
 const server = require('../../src/app')
 const {Favorites} = require("../../src/db")
 
-describe('FAVORITES', () => {
+describe("FAVORITES", () => {
     beforeAll(()=> {
         Favorites.sync({force:true})
     })
     afterAll(()=>{
         Favorites.sync({force:true})
     })
-    describe('POST /favorites', () => {
-        describe('If send invalid id', () => {
+    describe("POST /favorites", () => {
+        describe("If send invalid id", () => {
             it("should be responds with status code 400", async ()=> {
                 let response = await request(server).post('/favorites?id=wrongID')
                 expect(response.statusCode).toBe(400)
@@ -26,7 +26,7 @@ describe('FAVORITES', () => {
                 expect(favorites).toStrictEqual([])
             })
         });
-        describe('If send correct id', ()=> {
+        describe("If send correct id", ()=> {
             let expectData = [{"DogId": "30"}, {"DogId": "1"}]
 
             it("should be responds with status code 200", async()=>{

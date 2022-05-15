@@ -4,7 +4,8 @@ module.exports = (sequelize) => {
     sequelize.define('favorites', {
         DogId: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
+            unique: true
         },
     },
     {
