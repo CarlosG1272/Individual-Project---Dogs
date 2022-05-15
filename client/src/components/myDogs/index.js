@@ -9,7 +9,7 @@ import styles from "./mydogs.module.css"
 
 export default function MyDogs () {
     
-    const createdDogs = useSelector(state => state.dogs[1])
+    const createdDogs = useSelector(state => state.dogs.db)
     
     return (<section className={styles.container}>
         <Link to={"/home"}><button>Home</button></Link>

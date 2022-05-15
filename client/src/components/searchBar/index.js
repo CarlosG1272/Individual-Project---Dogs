@@ -69,9 +69,11 @@ export default function SearchBar(){
     let filteredDogs = ()=> {
         // Necesito una copia para poder trabajar
         //Uno mi dos arreglos, los de mi api y los creados
-        
+        if(dogs.api) {
+            let prueba = [...dogs.api, ...dogs.db]
 
-        let workDog = dogs.flat().sort(function SortArray(x, y){
+
+        let workDog = prueba.sort(function SortArray(x, y){
             if (x.name < y.name) {return -1;}
             if (x.name > y.name) {return 1;}
             return 0;
@@ -108,7 +110,7 @@ export default function SearchBar(){
         }    
     return perros && perros.slice(current, current + 8);
         // SI hay algo en la caja de texto
-    
+        }
     }
 
 // =================================== PAGINADO ===========================================

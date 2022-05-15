@@ -7,8 +7,8 @@ export function getDogs(name){
         .then(res=> res.json())
         .then( json=> {
             let dogs = json
-            if(dogs[1]) {
-                dogs[1] = dogs[1].map( function(el) {
+            if(dogs.db) {
+                dogs.db = dogs.db.map( function(el) {
                     if(el.temperaments){
                         el.temperaments = el.temperaments.map(t=> t.name)
                         return el

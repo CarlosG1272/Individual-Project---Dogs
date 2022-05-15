@@ -1,6 +1,6 @@
 
 let initialState = {
-    dogs: [],
+    dogs: {},
     detail: {},
     favorites: [],
     temperaments: []
@@ -18,7 +18,7 @@ export default function rootReducer(state = initialState, action){
         case "REMOVE_FAVORITE":
             return  {...state, favorites: state.favorites.filter(el=> el.id !== action.id)}
         case "DELETE_DOG":
-            return {...state, dogs: [state.dogs[0], state.dogs[1]= state.dogs[1].filter(el=> el.id !== action.id)]}
+            return {...state, dogs: {...state.dogs, db: state.dogs.db.filter(el=> el.id !== action.id)}}
         case "GET_TEMPERAMENTS":
             return {...state, temperaments: action.payload}
         case "FILTER_TEMPERAMENT":
