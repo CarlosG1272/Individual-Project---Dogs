@@ -10,7 +10,7 @@ const getIdDogs = require("./getIdDogs")
 const getTemperaments = require("./getTemperaments")
 const createDog = require("./createDog")
 const deleteDog = require("./deleteDog");
-const { addFavorite, deleteFavorite } = require('./add-deleteFavorite');
+const { addFavorite, deleteFavorite, getFavorites } = require('./add-deleteFavorite');
 
 const router = Router();
 
@@ -35,6 +35,7 @@ router.delete('/dog', deleteDog)
 
 
 // FAVORITES
+router.get('/favorites', getFavorites)
 router.post('/favorites', addFavorite)
 router.delete('/favorites', deleteFavorite)
 

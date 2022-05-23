@@ -55,14 +55,7 @@ async function getDogsDB(name){
     
      // Dentro de mi base de datos necesito hacer la petición pero OJO que estas no incluyen los temperamentos 
     try {
-        let dbResult = name ? 
-        await Dog.findOne({where: {name}, 
-            include:{Temperaments}, include: {
-            model: Temperaments,
-            attributes: ["name"] ,
-            // Para excluir la tabla de relaciones
-            through: {attributes: []}
-        }}): 
+        let dbResult = 
         await Dog.findAll( {
             include: {
                 model: Temperaments,

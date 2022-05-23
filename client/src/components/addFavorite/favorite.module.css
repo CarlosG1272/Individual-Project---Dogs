@@ -1,0 +1,28 @@
+.container{
+    position: absolute;
+}
+#favoriteIcon{
+    position: absolute;
+    background-color: transparent;
+    margin: 5px;
+    border: 0px solid transparent;
+}
+
+#isFavorite{
+    background-color: yellow;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#notFavorite{
+    background-color: transparent;
+}
+
+#notFavorite:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+#isFavorite:hover {
+    transform: scale(1.2);
+} 

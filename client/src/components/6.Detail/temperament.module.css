@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+#circle{
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+#text{
+    text-align: center;
+    background-color: yellow;
+    width: 130px;
+    padding: 10px;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Lobster', cursive;
+}

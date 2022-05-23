@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Smooch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+#backHome{
+    position: fixed;
+}
+#firstSection{
+    background-color: rgba(0, 217, 255, 0.3);
+    height: 100vh;
+}
+#mainDogImg{
+    width: 100%;
+    height: 100vh;
+}
+#headerName{
+    background: rgba( 252, 255, 0, 0.45 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 17px );
+    -webkit-backdrop-filter: blur( 17px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    width: 30%;
+    height: 150px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    text-align: center;
+    padding: 10px;
+}
+
+#name{
+    color: white;
+    font-size: 50px;
+    margin: 0px;
+    margin-bottom: 20px;
+}
+
+#more{
+    margin: 10px;
+    font-family: 'Smooch', cursive;
+    color: red;
+    font-size: 30px;
+}
+#more:hover{
+    color: blue;
+    font-size: 35px;
+}
+#AddFavorite{
+    position: absolute;
+    bottom: 20%;
+    right: 10%;
+    margin: 0px;
+    padding: 0px;
+}
+
+#back{
+    width: 100px;
+    height: auto;
+    margin: 20px;
+}
+
+#back:hover{
+    transform: rotate(-30deg);
+}
+
+#hover{
+    position: absolute;
+    z-index: 1;
+    bottom: 100px;
+    left: 45%;
+}
+/* ==================================================== */
+
+
+
+
+#secondSection{
+    background-color: rgb(174, 0, 251);
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+
+h2{
+    font-family: 'Macondo', cursive;
+    color: violet;
+    font-size: 50px;
+    margin-bottom: 5px;
+}
+
+#box1{
+    background-color: rgb(62, 0, 255);
+    height: 90%;
+    width: 60%;
+    color: white;
+}
+.label{
+    font-family: 'Anton', sans-serif;
+    font-size: 35px;
+}
+.textArea{
+    width: 80%;
+    margin-left: 10px;
+    display: flex;
+}
+.content{
+    font-size: 23px;
+    padding-top: 10px;
+}
+#box2{
+    position: absolute;
+    background-color: rgb(181, 255, 217);
+    height: 50%;
+    width: 45%;
+    right: 30px;
+    z-index: 1;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+#textArea2{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+#thirdSection{
+    background-color: rgb(23, 0, 85);
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#circleWrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+

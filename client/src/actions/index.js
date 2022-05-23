@@ -7,7 +7,8 @@ export function getDogs(name){
         .then(res=> res.json())
         .then( json=> {
             let dogs = json
-            if(dogs.db) {
+            if(dogs.db ) {
+                // eslint-disable-next-line
                 dogs.db = dogs.db.map( function(el) {
                     if(el.temperaments){
                         el.temperaments = el.temperaments.map(t=> t.name)
@@ -27,14 +28,15 @@ export function getDetail(id){
     return function(dispatch){
         return fetch(`http://localhost:3001/dogs/${id}`)
         .then(res => res.json())
-        .then(json=> dispatch({type: "GET_DETAIL", payload: json}))
+        .then(json=> { 
+            dispatch({type: "GET_DETAIL", payload: json})})
     }
 }
 
-export function addFavorite(object){
+export function addFavorite(id){
     return {
         type: "ADD_FAVORITE",
-        payload: object
+        payload: id
     }
 }
 
@@ -68,3 +70,12 @@ export function filterbyTemperament(array) {
         payload: array
     }
 }
+
+export function getFavorites() {
+    return function (dispatch){
+        return fetch("http://localhost:3001/favorites")
+        .then(response => response.json())
+        .then(data=> dispatch({type: "GET_FAVORITES", payload: data}))
+    }
+}
+

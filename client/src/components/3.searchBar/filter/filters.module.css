@@ -1,0 +1,26 @@
+#AscDescContainer{
+    margin: 5px
+}
+#AscDesc:hover{
+    cursor: pointer;
+}
+.container{
+    display: flex;
+    align-items: center;
+}
+.filterOptions {
+    background-color: rosybrown;
+    color: white;
+    height: 25px;
+}
+.filterOptions:hover{
+    cursor: pointer;
+}
+.cleanFiltered{
+    background-color: gray;
+    color: white;
+    border: 0px;
+    border-radius: 2px;
+    margin: 2px;
+    height: 25px;
+}

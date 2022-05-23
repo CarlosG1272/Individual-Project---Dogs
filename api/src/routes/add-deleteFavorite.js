@@ -1,8 +1,18 @@
 const { Dog, Favorites } = require("../db");
 const { getDogsApi, getDogsDB } = require("./getDogs");
 
+async function getFavorites(req, res){
+    try{
+        let favorites = await Favorites.findAll({raw: true});
+        return res.json(favorites)
+    } catch(e){
+        res.status(400).json({msg: "Error in petition"})
+    }
+}
+
+
 async function addFavorite(req,res) {
-    let {id} = req.query;
+    let {id} = req.body;
   try{
     let result = await Promise.all([getDogsApi(), getDogsDB()]);
     let completeData = [...result[0], ...result[1]]
@@ -42,4 +52,4 @@ async function deleteFavorite(req,res) {
     }   
 }
 
-module.exports = {addFavorite, deleteFavorite}
+module.exports = {addFavorite, deleteFavorite, getFavorites}

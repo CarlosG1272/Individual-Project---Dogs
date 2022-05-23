@@ -1,9 +1,10 @@
 .container{
     width: 43%;
-    height: 22vh;
+    height: 35vh;
     border: 1px solid white;
     display: flex;
-    margin: 5px 10px 5px 10px;
+    margin: 10px;
+    margin-top: 15px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -18,23 +19,47 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
 
 }
+.container2 {
+    display: flex;
+    justify-content: space-between;
+}
 
+.img{
+     -webkit-box-shadow: 0px 0px 8px 2px rgba(247,255,8,1);
+    -moz-box-shadow: 0px 0px 8px 2px rgba(247,255,8,1); 
+    box-shadow: 0px 0px 8px 2px rgba(247,255,8,1);
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    margin-left:15px;
+    margin-top: 50px;
+    min-height: 100px;
+    min-width: 250px;
+}
 .description {
-    /* background-color: red; */
+    padding-top: 25px;
     padding-left: 10px;
     color: wheat;
     font-size: 15px;
 }
+.containerDescription{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
 
 
 #img{
     padding: 3px;
+    
 }
 
 #name{
     color: rgb(255, 255, 255);
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
     margin-bottom: 10px;
 }
 
@@ -53,17 +78,13 @@
 
 
 
-#more{
+
+#iconMore{
     position: relative;
-    left: 50%;
-    bottom: 10px;
+    right: -80px;
+    bottom: 20px;
 }
 
-#isFavorite{
-    position: absolute;
-    background-color: yellow;
-}
-
-#notFavorite{
-    position: absolute;
+#iconMore:hover{
+    transform: scale(1.5);
 }

@@ -1,0 +1,31 @@
+#footer {
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    background-color:  rgb(107, 200, 210);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: black
+}
+.logo:hover{
+    background-color: gray;
+    border-radius: 20px;
+}
+.logo2:hover {
+    background-color: gray;
+    border-radius: 10px;
+}
