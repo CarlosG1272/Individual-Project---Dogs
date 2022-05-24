@@ -30,3 +30,16 @@
     cursor: pointer;
     background-color: red;
 }
+@media screen and (max-width: 500px) {
+    
+
+    #tittle{
+        color: white;
+        font-family: 'Macondo', cursive;
+        font-size: 20px;
+        text-align: center;
+    }
+    #backImage{
+        transform: scale(.6);
+    }
+}

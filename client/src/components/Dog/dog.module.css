@@ -1,6 +1,6 @@
 .container{
     width: 43%;
-    height: 35vh;
+    height: 20vh;
     border: 1px solid white;
     display: flex;
     margin: 10px;
@@ -20,6 +20,8 @@
 
 }
 .container2 {
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -33,21 +35,29 @@
     justify-content: center;
     margin-left:15px;
     margin-top: 50px;
-    min-height: 100px;
-    min-width: 250px;
-}
-.description {
-    padding-top: 25px;
-    padding-left: 10px;
-    color: wheat;
-    font-size: 15px;
+    /* min-height: 100px;
+    min-width: 250px; */
 }
 .containerDescription{
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
+.description {
+    width: 100%;
+    padding: 50px 10px 0px 30px;
+    color: wheat;
+    font-size: 15px; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 
 
 
@@ -87,4 +97,84 @@
 
 #iconMore:hover{
     transform: scale(1.5);
+}
+
+@media screen and (max-width: 1400px){
+    .container{
+        height: 40vh;
+    }
+    .img{
+        margin-top: 60px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .container{
+        height: 20vh;
+    }
+    .img{
+        width: max-content;
+        height: max-content;
+        align-items: center;
+    }
+    #img{
+        /*  La relacion es de 27/50 */
+        width: 200px;
+        height: calc((200px/50)*27);
+    }
+    #name{
+        color: rgb(255, 255, 255);
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .description{
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .container{
+        width: 80%;
+        margin: 15px 0px 10px -10px;
+    }
+    .description{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .container{
+        height: max-content;
+    }
+    .description{
+        z-index: 1;
+        font-size: 5px;
+    }
+    .img{
+        margin: auto;
+        margin-top: 20px;
+    }
+    #img{
+        /*  La relacion es de 27/50 */
+        width: 150px;
+        height: calc((150px/50)*27);
+    }
+    #iconMore{
+        position: relative;
+        bottom: 0px;
+    }
+    .container2 {
+        display: flex;
+        flex-direction: column;
+    }
+    .description {
+        width: 100%;
+
+        padding: 10px 10px 0px 30px;
+        color: wheat;
+        font-size: 15px; 
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
 }

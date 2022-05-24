@@ -39,7 +39,7 @@ export default function CardDog({
         </div>
         <div id={styles.box2}>
             <div>
-                <img src={require("../../imgs/defaultDog.png").default}  
+                <img id={styles.imgDog}src={require("../../imgs/defaultDog.png").default}  
                 width="250" height="250" alt="defaultCuteDog"/>
             </div>
         </div>

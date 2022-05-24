@@ -1,7 +1,40 @@
 .container{
-    height: 180vh;
+    height: max-content;
     width: 100%;
     background-image: url(https://www.1zoom.me/big2/423/280454-blackangel.jpg);
     background-position: center;
-    width: 100%;
+    padding-bottom: 100px;
 }
+#NavBar {
+    height: max-content;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+@media screen and (min-height: 800px) {
+    #NavBar {
+        height: max-content;
+        position: fixed;
+        top: 200px;
+        right: 30px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    #NavBar{
+        z-index: 1;
+        display: flex;
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        right: 0px;
+        align-items: flex-end;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container{
+        padding-bottom: 150px;
+    }
+}
+

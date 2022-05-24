@@ -1,4 +1,4 @@
-const { Dog, Favorites } = require("../db");
+const { Favorites } = require("../db");
 const { getDogsApi, getDogsDB } = require("./getDogs");
 
 async function getFavorites(req, res){
@@ -43,7 +43,7 @@ async function deleteFavorite(req,res) {
             where: {DogId: id}
         })
         // El destroy devuelve 0 si no fue destruido y 1 si fue destruido
-        if(result == 0) {
+        if(result === 0) {
             return res.status(404).json({msg: `Don´t exist a dog with id ${id}`})
         }
         res.json({msg: `Dog with id ${id} successfully remove to favorites`})

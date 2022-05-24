@@ -34,3 +34,19 @@
     cursor: pointer;
     border: 1px solid black;
 }
+
+@media screen and (max-width: 700px) {
+    .containerForms{
+        display: flex;
+    }
+    .container{
+        display: flex;
+        flex-direction: row;
+        margin: 0px;
+        padding: 0px;
+        
+    }
+    *{
+        font-size: 15px;
+    }
+}

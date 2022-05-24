@@ -15,7 +15,6 @@ import Filters from "./filter/filters";
 import LoadingComponent from "./Loader/Loading";
 
 export default function SearchBar(){
-    // Sin mayuscula no me acepta, debe empezar por mayuscual
     const [input, setInput] = useState("");
     const [temperament, setTemperament] = useState("");
 
@@ -28,7 +27,7 @@ export default function SearchBar(){
     const [arrayT, setArrayT] = useState([])
     let dispatch = useDispatch();
     
-    // PARa que ni bien cargue me muestre :V 
+
     useEffect(()=> {
         dispatch(getDogs(input))
         dispatch(getFavorites())
@@ -58,7 +57,6 @@ export default function SearchBar(){
         // Ademas debo dejar mi paginación en 0 nuevamente
         setCurrent(0)
     }
-    // currentArray = dogs[0] && dogs[0].filter(el=> el.name.toLowerCase().includes(input.toLowerCase()))
 
     const handleSubmit = (e)=>{
         e.preventDefault()
@@ -68,10 +66,8 @@ export default function SearchBar(){
     /*====================================================== */
     
 
-// Este optionsTemperament es del selectlis
+
     let filteredDogs = ()=> {
-        // Necesito una copia para poder trabajar
-        //Uno mi dos arreglos, los de mi api y los creados
         if(dogs.api) {
             let prueba = [...dogs.api, ...dogs.db]
 
@@ -84,15 +80,12 @@ export default function SearchBar(){
         // =======================================
 
         let perros = orderedDog(workDog, descendent, height, weight)
-        // Esto es lo que esta mostrando en pantalla, asi que aqui modifico
-        // SI no se ha ingresado nada, pues se realiza lo de siempre
 
 // =================================================================================
         if(arrayT && arrayT.length !== 0) {
                 // arrayT = [alegre, smart]
                 perros = perros.filter(el=> el && selectTemperament(el, arrayT))   
         }
-        // Hasta acá funka, ya me cambia los perros XD
         
 // =================================================================================
 
@@ -110,21 +103,18 @@ export default function SearchBar(){
              return filtro.slice(current, current + 8)
         }    
     return perros && perros.slice(current, current + 8);
-        // SI hay algo en la caja de texto
         }
     }
 
 // =================================== PAGINADO ===========================================
 
     let nextPage = (e) => {
-        // Solo si mi arreglo sigue contando con mas de 8 elementos sigo cortando, sino ahi queda XD 
             e.preventDefault()
             setCurrent(current+8)   
     }
 
     let prevPage = (e)=>{
         e.preventDefault()
-        // Si es mayor igual a 8 puede retroceder, sino esta mal encaminado y se queda ahí
         if(current > 0)
             setCurrent(current-8)
         
@@ -132,7 +122,7 @@ export default function SearchBar(){
     /*====================================================== */
 
     return(<section>
-        <section>
+        <section className={styles.containerForms}>
         <div className={styles.forms}>
             <form id={styles.dogSearch} onSubmit={handleSubmit}>
                 <input 
@@ -142,7 +132,6 @@ export default function SearchBar(){
                 onChange={handleChange}
                 placeholder={"Please insert a breed dog..."}
                 ></input>
-                {console.log(height)}
                 <input className={styles.submit} type={"submit"} value={"Search"}></input>
             </form>
 

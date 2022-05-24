@@ -7,23 +7,23 @@ module.exports = (sequelize) => {
     id: {
       type: DataTypes.UUID,
       primaryKey: true,
-      defaultValue: DataTypes.UUIDV4, // El valor se asignarà de forma automática con un identificador universal de la versión 4.
+      defaultValue: DataTypes.UUIDV4, 
     },
     name: {
       type: DataTypes.STRING, 
       allowNull: false
     }, 
     height_min: { 
-      type: DataTypes.INTEGER,
+      type: DataTypes.FLOAT,
       allowNull: false
     },
     height_max: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.FLOAT,
       allowNull: false
     }
     , 
     weight_min: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.FLOAT,
       allowNull: false 
     }
     ,

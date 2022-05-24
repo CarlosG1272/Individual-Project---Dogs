@@ -24,3 +24,12 @@
     margin: 2px;
     height: 25px;
 }
+
+@media screen and (max-width: 720px) {
+    option{
+        font-size: 10px;
+    }
+    .cleanFiltered{
+        font-size: 10px;
+    }
+}

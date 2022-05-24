@@ -23,9 +23,7 @@ export default function MyDogs () {
         <div id={styles.tittle}>Dogs created</div>
         <section className={styles.wrapContainer}>
         {createdDogs && createdDogs.map(d=> {
-            // Yo nombre a mi temperamento, Temperaments
             return(<CardDog 
-                 //  La key va aquí
             key={d.id}
             id={d.id} 
             name={d.name}

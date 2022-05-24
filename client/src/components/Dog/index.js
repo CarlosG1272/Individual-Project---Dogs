@@ -20,23 +20,21 @@ export default function Dog({
 }) {
 
   let dispatch = useDispatch()
-  // YA funka loko
+ 
   const deleteButton = (e) => {
     e.preventDefault();
     deleteDog(id);
     dispatch(deleteMydogs(id));
   };
 
-// Por si me llega la información como un arreglo 
-  
+
   return (
     <section className={styles.container} key={id} data-testid="container">
     <div className={styles.container2}>
-      {/* Componente para favoritos */}
+
       <AddFavorite id={id} width={"35"} height={"35"}/> 
 
       <section className={styles.img}>
-        {/* Para que solo aparezca en mis perros creados */}
 
         {deleteDog && <button onClick={deleteButton}>Delete</button>}
         

@@ -1,5 +1,4 @@
 import React from "react"
-// Que es extend expect XD
 import "@testing-library/jest-dom/extend-expect"
 import {render} from "@testing-library/react"
 
@@ -13,7 +12,6 @@ describe("Testing LANDING PAGE", ()=> {
         component = render(<BrowserRouter><LandingPage /></BrowserRouter>)
     })
     it("The component is render correctly the title", () => {
-        // component.getByText("Hi! Welcome to this FULL STACK DOG APPLICATION.")
         expect(component.container).toHaveTextContent("Hi! Welcome to this FULL STACK DOG APPLICATION.")
     }); 
 
@@ -35,10 +33,3 @@ describe("Testing LANDING PAGE", ()=> {
 
 })
 
-// component.debug() me muestra directamente  que se esta renderizando
-
-// const mockHandler = jest.fn()
-// const component = render(
-//     <BrowserRouter>
-//         <LandingPage toggleImportance={mockHandler }/>
-//     </BrowserRouter>)

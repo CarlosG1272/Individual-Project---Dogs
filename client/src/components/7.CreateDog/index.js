@@ -1,10 +1,6 @@
 import React, { useState } from "react";
-
 import { Link } from "react-router-dom";
-
-// Para agregar temperamentos con seleccion multiple loko XD
 import SelectList from "../selectList/SelectList"
-//
 import styles from "./form.module.css";
 
 import { validationsForm } from "./validationFunction"
@@ -14,7 +10,7 @@ import { validationsForm } from "./validationFunction"
 import Message from "./msgComponents/correctSend";
 import BoxTemperament from "./box-temperament"
 
-  // Este valor se va a mi hook personalizado, y su estado toma esos valores
+
   const initialForm = {
   name: "",
   height_min: 0,
@@ -188,7 +184,7 @@ export default function CreateDog() {
            />  
         </div>
 
-        <div className={styles.label}>
+        <div className={styles.label} id={styles.labelNewTemperament}>
           <label>Create a New Temperament:</label>
           <input
             className={styles.large}
@@ -200,7 +196,6 @@ export default function CreateDog() {
           ></input>
            <button id={styles.addTemperament}onClick={addTemperament}>Add Temperament</button>  
         </div>
-      {/* Aqui necesito un componente que me muestre los temperamentos que tengo seleccionados y además la posibilidad de poder eliminarlos */}
        
        <section id={styles.dipTemperaments}>
         {form.temperaments.length=== 0 ? "Add temperaments":<div id={styles.wrapContainer}>    

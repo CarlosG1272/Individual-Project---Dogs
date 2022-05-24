@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 
-  
+body{
+    background: rgb(190, 216, 205);
+}
 .container{
     height: 100vh;
     width: 100%;
     background: rgb(190, 216, 205);
-    height: 100vh;
-    width: 100%;
 }
 .background{
     width: max-content;
@@ -44,8 +44,6 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
 #start{
-    
-    /* Para que encaje al centro del div XD */
     width: 60%;
     margin: auto;
     /* =================================== */
@@ -57,7 +55,11 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 
     
 }
-
+#footer{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
 #fingerprint:hover{
     border-radius: 70px;
     animation: changeColor .3s forwards;
@@ -79,3 +81,53 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
 
+@media screen and (max-width: 500px) {
+  
+    .container{
+        width:  100%;
+        height: max-content;
+        font-size: 10px;
+    }
+    .title{
+        color: #15133C;
+        width: 70%;
+        margin: auto;
+        margin-top: 10px;
+        text-align: center;
+        font-family: 'Koulen', cursive;
+        font-size: 20px;
+    }
+    
+    .text {
+        width: 70%;
+        margin: auto;
+        margin-top: 50px;
+        font-size: 20px;
+    }
+    .background{
+        width: max-content;
+        position: absolute;
+        top: 150px;
+        left: 0px;
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    }
+    #dogIMG{
+        transform: scale(.8);
+        position: absolute;
+        background-color: white;
+        display: block;
+    }
+    #start{
+        width: 100%;
+        margin: auto;
+        /* =================================== */
+        margin-top: 350px;
+        display: flex;
+        flex-direction: column;  
+        align-items: center;
+        
+    }
+
+}

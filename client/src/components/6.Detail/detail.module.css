@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Koulen&family=Smooch&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-
+*{
+    margin: 0px;
+    padding: 0px;
+}
 #backHome{
     position: fixed;
 }
@@ -21,7 +24,7 @@
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     width: 30%;
-    height: 150px;
+    height: max-content;
     position: absolute;
     right: 10px;
     top: 10px;
@@ -47,11 +50,9 @@
     font-size: 35px;
 }
 #AddFavorite{
-    position: absolute;
+    position: sticky;
     bottom: 20%;
     right: 10%;
-    margin: 0px;
-    padding: 0px;
 }
 
 #back{
@@ -96,6 +97,10 @@ h2{
     height: 90%;
     width: 60%;
     color: white;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .label{
     font-family: 'Anton', sans-serif;
@@ -119,7 +124,9 @@ h2{
     z-index: 1;
     font-size: 20px;
     display: flex;
+    margin: auto;
     flex-direction: column;
+    align-items: center;
 }
 #textArea2{
     margin-top: 50px;
@@ -132,7 +139,7 @@ h2{
 
 #thirdSection{
     background-color: rgb(23, 0, 85);
-    height: 50vh;
+    height: max-content;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -144,3 +151,126 @@ h2{
     justify-content: center;
 }
 
+
+@media screen and (min-height: 1080px) {
+    #secondSection{
+        height: max-content;
+        
+    }
+    #box2{
+        height: max-content;
+
+    }
+    #textArea2{
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    #AddFavorite{
+        width: 10px;
+    }
+    
+    #name{
+        font-size: 25px ;
+    }
+    #more{
+        font-size: 15px;
+    }
+    .content{
+        font-size: 15px;
+    }
+    .label{
+        font-size: 18px;
+    }
+    #textArea2{
+        font-size: 15px;
+    }
+    h2{
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 600px) {
+    #name{
+        font-size: 20px ;
+    }
+    #box2{
+        display: block;
+        position: unset;
+    }
+    #secondSection{
+    display: flex;
+    flex-direction: column;
+}
+   
+}
+
+@media screen and (max-width: 400px) {
+    #hover{
+        display: none;
+    }
+    #firstSection{
+        height: max-content;
+    }
+    .content{
+        font-size: 10px;
+    }
+    #secondSection{
+        height: max-content;
+    }
+    #box1{
+        font-size: 10px;
+        width: 80%;
+    }
+    #box2{
+        font-size: 10px;
+        width: 80%;
+        font-size: 10px;
+    }
+    #mainDogImg{
+        width: 100%;
+        height: auto;
+    }
+    #name{
+        font-size: 25px ;
+    }
+    #more{
+        font-size: 10px;
+    }
+    .content{
+        font-size: 10px;
+    }
+    .label{
+        font-size: 10px;
+    }
+ 
+    h2{
+        font-size: 30px;
+    }
+    #box2{
+        display: block;
+        position: unset;
+    }
+    #secondSection{
+    display: flex;
+    flex-direction: column;
+    }
+   #textArea2{
+        font-size: 8px;
+        margin-bottom: 20px;
+   }
+   #AddFavorite{
+    position: sticky;
+    transform: scale(.5);
+    top: 20px;
+    }
+    #backHome{
+        transform: scale(.5);
+        top: -30px;
+        left: -30px
+    }
+}

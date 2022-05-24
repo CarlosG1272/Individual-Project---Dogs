@@ -4,6 +4,7 @@
   height: 80vh;
   align-items: center;
   justify-content: center;
+  background-color: transparent;
 }
 .dual_ring {
     display: inline-block;

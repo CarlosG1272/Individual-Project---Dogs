@@ -24,8 +24,6 @@ export default function rootReducer(state = initialState, action){
         case "GET_TEMPERAMENTS":
             return {...state, temperaments: action.payload}
         case "FILTER_TEMPERAMENT":
-            // Aqui tengo un array [1, 2 ,3]
-            // y lo tengo que comprar con otro array [{temperament: 1, 2, 3}]
             return {...state, dogs: action.payload}
         default: return {...state}
     }

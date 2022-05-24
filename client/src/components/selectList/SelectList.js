@@ -69,7 +69,7 @@ export class SelectList extends React.Component {
                     />
                 </label>
             </section>
-            {/* Me marcaba warning porque en react se pasa el selectMultiple con minuscula, y los booleanos como string "true" y no true */}
+            
         <section>
              <select onChange={this.handleChange} selectmultiple={"true"}
              id={styles.select}
@@ -77,7 +77,6 @@ export class SelectList extends React.Component {
              value={this.state.options}>
                 {/* Default */ }
              { this.props.input === "" && <option  value={""}  >
-             {/* selected="selected" no es necesario XD */}
              -- Select temperament --
              </option> }
 
@@ -89,7 +88,6 @@ export class SelectList extends React.Component {
                  }
             </select>
             <div id={styles.filterButtons}>
-                {/* {si es de createDog no necesito el boton} */}
                 {!this.props.CreateDog
                 && <button onClick={this.filterTemperaments}
                 className={styles.filterButtons}>Filtered</button> }

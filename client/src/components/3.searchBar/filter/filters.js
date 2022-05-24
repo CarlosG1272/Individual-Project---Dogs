@@ -13,8 +13,6 @@ export default function Filters({
 
 
   let orderByHeight = (e) => {
-    // Por alguna razon el e.target.value es un string XD
-    // Sin el return tampoco funka loko XD 
     switch(parseInt(e.target.value)) {
         case 0: 
             return setHeight((prev) => ({ ...prev, actived: false, min: false}))

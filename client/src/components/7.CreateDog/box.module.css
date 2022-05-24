@@ -4,7 +4,6 @@
     background-color: royalblue;
     margin: 15px;
     border: 1px solid green;
-
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,0,48,1) 35%, rgba(0,212,255,1) 100%);
     display: flex;

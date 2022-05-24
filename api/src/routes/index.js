@@ -27,8 +27,6 @@ router.get('/dogs/:id', getIdDogs)
 router.get('/temperaments', getTemperaments)
 
 // [ ] POST /dog:
-// Recibe los datos recolectados desde el formulario controlado de la ruta de creación de raza de perro por body
-// Crea una raza de perro en la base de datos
 router.post('/dog', createDog)
 
 router.delete('/dog', deleteDog)

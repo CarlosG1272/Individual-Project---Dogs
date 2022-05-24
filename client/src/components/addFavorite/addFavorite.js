@@ -24,7 +24,6 @@ export default function AddFavorite({id, width, height}){
   let findDog = favorites.find(el=> el.DogId.toString() === id.toString())
   useEffect(() => {
     setFavorite(findDog ? true:false)
-    // Si no pongo el findDog dentro de la dependencia me marca warning
   }, [findDog]);
 
     return(<div className={styles.container}>

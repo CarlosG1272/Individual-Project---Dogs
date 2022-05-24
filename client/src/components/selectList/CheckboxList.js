@@ -43,7 +43,6 @@ export class CheckboxList extends React.Component {
                 {/* Default */}
 
                  {this.props.temperaments && this.props.temperaments
-                //  .filter(el=> el.name && el.name.toLowerCase().includes(this.props.temperament))
                  .map(el=> {
                      return(<option type="" key={el.id} value={el.name}>
                          {el.name}

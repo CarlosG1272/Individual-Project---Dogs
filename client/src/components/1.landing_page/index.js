@@ -9,6 +9,7 @@ export default class LandingPage extends React.Component{
             <section className={styles.container}>
                 <div className = {styles.background}>
                     <img 
+                    id={styles.dogIMG}
                     alt="mainDog"
                     src={require("../../imgs/dog.jpg").default}
                     width="400"
@@ -33,7 +34,9 @@ export default class LandingPage extends React.Component{
                         />
                     </Link>
                 </div>
-                <Footer />
+                <div id={styles.footer}>
+                    <Footer />
+                </div>
             </section>
         )
     }

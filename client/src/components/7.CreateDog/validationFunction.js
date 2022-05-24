@@ -1,7 +1,6 @@
 export const validationsForm = (form)=>{
     let errors = {};
-    let regexName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/
-    // El trim para que no me la cuelen con espacios vacios XD
+
     let hmin = parseFloat(form.height_min);
     let hmax = parseFloat(form.height_max);
     let wmin = parseFloat(form.weight_min);

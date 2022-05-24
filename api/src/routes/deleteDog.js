@@ -2,10 +2,8 @@ const { Dog } = require("../db")
 
 async function deleteDog (req,res) {
     let { id } = req.query; 
-    // Me esta llegando por req.query no se porque loko XD
     try{
-
-        let deleted = await Dog.destroy({
+        await Dog.destroy({
             where: {id}  
         })
         return res.json({msg: "deleted dog"})
