@@ -1,7 +1,7 @@
 import axios from "axios"
 
 export const postFavorite = async(id)=> {
-    const response = await axios.post("/favorites", {
+    const response = await axios.post('/favorites', {
         id
     })
     return response

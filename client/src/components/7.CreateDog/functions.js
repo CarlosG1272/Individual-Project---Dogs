@@ -1,6 +1,6 @@
 import axios from "axios"; 
 export const PostDog = async(input)=> {
-    const response = await axios.post("/dog", {
+    const response = await axios.post('/dog', {
         name: input.name,
         height_min: input.height_min,
         height_max: input.height_max,
