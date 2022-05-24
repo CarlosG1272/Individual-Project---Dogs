@@ -74,8 +74,8 @@ export function filterbyTemperament(array) {
 
 export function getFavorites() {
     return function (dispatch){
-        return fetch('/favorites')
-        .then(response => response.json())
+        return axios.get('/favorites')
+        .then(response => response.data)
         .then(data=> dispatch({type: "GET_FAVORITES", payload: data}))
     }
 }

@@ -6,8 +6,10 @@ async function getIdDogs(req,res){
 
     try{
         let result = await Promise.all([getDogsApi(), getDogsDB()]);
-        let combinationResult = [...result[0], result[1]]
-        
+
+        let combinationResult = {api: result[0], db: result[1]}
+
+        combinationResult = [...combinationResult.api, ...combinationResult.db]
         let coincidence = await combinationResult.find(el=> el.id.toString() === id.toString())
         if(!coincidence) return res.status(404).json({msg: "Don´t exist a dog with this ID"})
         return res.status(200).json(coincidence)

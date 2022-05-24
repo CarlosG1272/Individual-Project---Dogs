@@ -93,10 +93,7 @@
 }
 
 #loader{
-    position: absolute;
-    top: 18%;
-    left: 36%;
-    background-color: transparent;
+    margin-top: 8%;
 }
 
 /*RESPONSIVE*/
