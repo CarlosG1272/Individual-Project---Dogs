@@ -1,10 +1,11 @@
+import axios from "axios"
 
 export function getDogs(name){
     return function(dispatch){
-        return fetch(!name ? 
+        return axios.get(!name ? 
         '/dogs':
         `/dogs?name=${name}`)
-        .then(res=> res.json())
+        .then(res=> res.data)
         .then( json=> {
             let dogs = json
             if(dogs.db ) {
@@ -26,8 +27,8 @@ export function getDogs(name){
 
 export function getDetail(id){
     return function(dispatch){
-        return fetch(`/dogs/${id}`)
-        .then(res => res.json())
+        return axios.get(`/dogs/${id}`)
+        .then(res => res.data)
         .then(json=> { 
             dispatch({type: "GET_DETAIL", payload: json})})
     }
@@ -56,8 +57,8 @@ export function deleteMydogs(id) {
 
 export function getTemperaments(){
     return function (dispatch) {
-        return fetch('/temperaments')
-        .then(response=>response.json())
+        return axios.get('/temperaments')
+        .then(response=>response.data)
         .then(response=>{
             dispatch({type: "GET_TEMPERAMENTS", payload: response})
         })

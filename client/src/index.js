@@ -10,6 +10,7 @@ import store from "./store/index"
 import axios from "axios";
 import dotenv from "dotenv"
 dotenv.config()
+
 axios.defaults.baseURL = process.env.REACT_APP_URL || "http://localhost:3001"
 
 ReactDOM.render(
