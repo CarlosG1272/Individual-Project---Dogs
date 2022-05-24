@@ -2,8 +2,8 @@
 export function getDogs(name){
     return function(dispatch){
         return fetch(!name ? 
-        "http://localhost:3001/dogs":
-        `http://localhost:3001/dogs?name=${name}`)
+        "/dogs":
+        `/dogs?name=${name}`)
         .then(res=> res.json())
         .then( json=> {
             let dogs = json
@@ -26,7 +26,7 @@ export function getDogs(name){
 
 export function getDetail(id){
     return function(dispatch){
-        return fetch(`http://localhost:3001/dogs/${id}`)
+        return fetch(`/dogs/${id}`)
         .then(res => res.json())
         .then(json=> { 
             dispatch({type: "GET_DETAIL", payload: json})})
@@ -56,7 +56,7 @@ export function deleteMydogs(id) {
 
 export function getTemperaments(){
     return function (dispatch) {
-        return fetch("http://localhost:3001/temperaments")
+        return fetch("/temperaments")
         .then(response=>response.json())
         .then(response=>{
             dispatch({type: "GET_TEMPERAMENTS", payload: response})
@@ -73,7 +73,7 @@ export function filterbyTemperament(array) {
 
 export function getFavorites() {
     return function (dispatch){
-        return fetch("http://localhost:3001/favorites")
+        return fetch("/favorites")
         .then(response => response.json())
         .then(data=> dispatch({type: "GET_FAVORITES", payload: data}))
     }
